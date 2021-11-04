@@ -20,7 +20,7 @@ class Player {
     c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
     // c.fillStyle = this.color;
     // c.fill();
-    c.drawImage(game.playerImg, this.x - 35, this.y - 34, 80, 65);
+    c.drawImage(game.playerImg, this.x - 51, this.y - 57, 125, 107);
     c.restore();
   }
 

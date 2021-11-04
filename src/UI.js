@@ -11,7 +11,9 @@ const image = new Image();
 image.src = 'img/pexels-jo-kassis-5522408.jpg';
 
 image.onload = () => {
-  c.drawImage(image, 0, 0);
+  setTimeout(() => {
+    c.drawImage(image, 0, 0);
+  }, 0);
 };
 
 // ---- UI COMPONENTS ---- //
@@ -37,7 +39,7 @@ const getPowerUpAudio = new Audio('audio/Power Up sound effect.mp3');
 const backgroundAudio = new Audio('audio/background.mp3');
 const died = new Audio('audio/Roblox Death Sound Effect.mp3');
 backgroundAudio.loop = true; // to loop the music over whenever ends
-backgroundAudio.volume = 0.2;
+backgroundAudio.volume = 0.4;
 highScoreBoard.textContent = `High Score: ${game.highScore}`;
 
 // ---- create projectiles: automatic shooting (power-up) ---- //

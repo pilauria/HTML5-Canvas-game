@@ -4,10 +4,10 @@ class Game {
     // initialize 'scene' variable to deactivate the screen on game over (no click)
     //  insert player image
     this.playerImg = new Image();
-    this.playerImg.src = '/img/spaceship-g0ddc90c0d_1920.png';
+    this.playerImg.src = 'img/spaceship-g0ddc90c0d_1920.png';
     // insert powerUp image
     this.powerUpImg = new Image();
-    this.powerUpImg.src = '/img/power-up.png';
+    this.powerUpImg.src = 'img/power-up.png';
     this.player = null;
     // INITIALIZE ARRAYS FOR STORAGE OF MULTIPLE OBJECTS (manage multiple instances of the same object with arrays)
     this.projectiles = [];
@@ -33,7 +33,7 @@ class Game {
     const x = canvas.width / 2;
     const y = canvas.height / 2;
     // ---- instantiate  a new Player
-    this.player = new Player(x, y, 28, '#fff');
+    this.player = new Player(x, y, 40, '#fff');
     this.powerUps = [];
     this.projectiles = [];
     this.enemies = [];
