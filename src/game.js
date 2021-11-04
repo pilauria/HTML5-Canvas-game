@@ -39,7 +39,7 @@ class Game {
     this.enemies = [];
     this.particles = [];
     this.score = 0;
-    this.lives = 1;
+    this.lives = 2;
     liveLabel.innerHTML = this.lives;
     scoreUI.innerHTML = this.score;
     scoreFinal.innerHTML = this.score;
@@ -51,7 +51,7 @@ class Game {
     if (this.highScore < this.score) {
       this.highScore = this.score;
       localStorage.setItem('highScore', this.score);
-      highScoreBoard.textContent = `High Score: ${this.score}`;
+      highScoreBoard.textContent = `High Sfcore: ${this.score}`;
     }
   }
 
@@ -87,7 +87,7 @@ class Game {
     }, 2000);
   }
 
-  // ------ GENERATE RANDOM this.POWERUPS ------ //
+  // ------ GENERATE RANDOM POWERUPS ------ //
   spawnPowerUps() {
     this.width = 20;
     this.height = 20;

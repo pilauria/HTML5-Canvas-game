@@ -8,7 +8,7 @@ canvas.width = innerWidth;
 canvas.height = innerHeight;
 
 const image = new Image();
-image.src = '/img/pexels-jo-kassis-5522408.jpg';
+image.src = 'img/pexels-jo-kassis-5522408.jpg';
 
 image.onload = () => {
   c.drawImage(image, 0, 0);
@@ -28,14 +28,14 @@ const audioOnEl = document.querySelector('#audioOn');
 
 // ------ SOUND ------- //
 const startGameAudio = new Audio(
-  '/audio/Game Start Sound Effect ► Game Start SFX ► Game Start Sound MP3 _ HD.mp3'
+  'audio/Game Start Sound Effect ► Game Start SFX ► Game Start Sound MP3 _ HD.mp3'
 );
-const endGameAudio = new Audio('/audio/mixkit-falling-game-over-1942.wav');
-const shootAudio = new Audio('/audio/enemy hit.mp3');
-const hitAudio = new Audio('/audio/ding.mp3');
-const getPowerUpAudio = new Audio('/audio/Power Up sound effect.mp3');
-const backgroundAudio = new Audio('/audio/background.mp3');
-const died = new Audio('/audio/Roblox Death Sound Effect.mp3');
+const endGameAudio = new Audio('audio/mixkit-falling-game-over-1942.wav');
+const shootAudio = new Audio('audio/enemy hit.mp3');
+const hitAudio = new Audio('audio/ding.mp3');
+const getPowerUpAudio = new Audio('audio/Power Up sound effect.mp3');
+const backgroundAudio = new Audio('audio/background.mp3');
+const died = new Audio('audio/Roblox Death Sound Effect.mp3');
 backgroundAudio.loop = true; // to loop the music over whenever ends
 backgroundAudio.volume = 0.2;
 highScoreBoard.textContent = `High Score: ${game.highScore}`;
