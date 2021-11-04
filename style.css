@@ -22,7 +22,7 @@ body {
   height: 30px;
   width: auto;
   position: fixed;
-  left: 5%;
+  left: 3%;
   margin-top: 65px;
   cursor: pointer;
   z-index: 10;
@@ -32,7 +32,7 @@ body {
   width: auto;
   position: fixed;
   display: none;
-  left: 5%;
+  left: 3%;
   margin-top: 65px;
   cursor: pointer;
   z-index: 10;
@@ -49,7 +49,7 @@ body {
 .container-lives {
   position: fixed;
   top: 20px;
-  right: 20px;
+  right: 25px;
   color: aliceblue;
   font-family: 'DM Mono', monospace;
 }
