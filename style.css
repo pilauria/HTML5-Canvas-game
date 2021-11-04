@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Montserrat:ital,wght@0,300;0,600;0,700;1,400;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+canvas {
+  background-image: url('./img/pexels-jo-kassis-5522408.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body {
+  overflow: hidden;
+  user-select: none;
+}
+
+#audio {
+  height: 30px;
+  width: auto;
+  position: fixed;
+  left: 5%;
+  margin-top: 65px;
+  cursor: pointer;
+  z-index: 10;
+}
+#audioOn {
+  height: 30px;
+  width: auto;
+  position: fixed;
+  display: none;
+  left: 5%;
+  margin-top: 65px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.container-score {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  color: aliceblue;
+  font-family: 'DM Mono', monospace;
+}
+
+.container-lives {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: aliceblue;
+  font-family: 'DM Mono', monospace;
+}
+
+.highScore {
+  position: fixed;
+  top: 20px;
+  left: 45%;
+  color: aliceblue;
+  font-family: 'DM Mono', monospace;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.score-info {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.lives-info {
+  font-size: 1.6rem;
+}
+
+.container-modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 55%;
+  height: 45%;
+  background-color: #d5f0bf;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 13px;
+}
+
+#score-final {
+  font-size: 7rem;
+  font-weight: 700;
+  margin-bottom: -25px;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+#game-over {
+  text-align: center;
+  color: #37432d;
+  font-size: 4rem;
+  margin-top: 65px;
+  padding-top: 40px;
+  animation: blinker 1.5s linear infinite;
+  display: none;
+  text-shadow: 1px 2px 4px #9abb7f;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+#info {
+  margin-top: 60px;
+  text-align: center;
+  padding: 20px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+#score-final,
+p {
+  text-align: center;
+}
+
+.btn-start {
+  box-shadow: inset 1px 10px 14px -3px #f2fadc;
+  background: linear-gradient(to bottom, #688c1a 5%, #5c734c 100%);
+  background-color: #688c1a;
+  border-radius: 12px;
+  border: 1px solid #e5eede;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 600;
+  margin-top: 40px;
+  padding: 15px 115px;
+  border-radius: 13px;
+  width: 100%;
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 1px #ced9bf;
+}
+
+.btn-start:hover {
+  background: linear-gradient(to bottom, #5c734c 15%, #688c1a 100%);
+  background-color: #5c734c;
+}
+
+.btn-start:active {
+  position: relative;
+  top: 2px;
+}
+
+.container-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.container-keys {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container-keys1 {
+  display: flex;
+  margin-right: 10px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+#use {
+  margin-left: 15px;
+}
+
+#up {
+  margin-left: 8px;
+}
+
+#down {
+  margin-left: 8px;
+}
+
+.fas {
+  margin-right: 10px;
+}
+
+.fa-arrow-left {
+  margin-left: 3px;
+}
+
+span {
+  font-weight: 600;
+}
+
+.sign {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  background-image: radial-gradient(
+    ellipse 50% 35% at 50% 50%,
+    #919d89,
+    transparent
+  );
+  transform: translate(-50%, -50%);
+  letter-spacing: 2;
+  left: 50%;
+  top: 13%;
+  font-family: 'Irish Grover', cursive;
+  text-transform: uppercase;
+  font-size: 7.5rem;
+  color: #d0d8cb;
+  text-shadow: 0 0 0.6rem #d0d8cb, 0 0 1.5rem #5c734c,
+    -0.2rem 0.1rem 1rem #5c734c, 0.2rem 0.1rem 1rem #5c734c,
+    0 -0.5rem 2rem #3b4b32, 0 0.5rem 3rem #3b4b32;
+  animation: shine 2s forwards, flicker 3s infinite;
+  user-select: none;
+}
+
+@keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #d0d8cb;
+    text-shadow: 0 0 0.6rem #d0d8cb, 0 0 1.5rem #5c734c,
+      -0.2rem 0.1rem 1rem #5c734c, 0.2rem 0.1rem 1rem #5c734c,
+      0 -0.5rem 2rem #3b4b32, 0 0.5rem 3rem #3b4b32;
+  }
+  28%,
+  33% {
+    color: #5c734c;
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: #3b4b32;
+    text-shadow: none;
+  }
+}
+
+.flicker {
+  animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+  animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #0b3321;
+    text-shadow: none;
+  }
+  100% {
+    color: #d0d8cb;
+    text-shadow: 0 0 0.6rem #d0d8cb, 0 0 1.5rem #5c734c,
+      -0.2rem 0.1rem 1rem #5c734c, 0.2rem 0.1rem 1rem #5c734c,
+      0 -0.5rem 2rem #3b4b32, 0 0.5rem 3rem #3b4b32;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
