@@ -8,7 +8,7 @@ canvas.width = innerWidth;
 canvas.height = innerHeight;
 
 const image = new Image();
-image.src = 'img/pexels-jo-kassis-5522408.jpg';
+image.src = 'img/pexels-jo-kassis-55224081.jpg';
 
 image.onload = () => {
   setTimeout(() => {
