@@ -80,14 +80,14 @@ body {
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
   left: 50%;
-  top: 50%;
+  top: 65%;
   transform: translate(-50%, -50%);
   width: 55%;
   height: 45%;
   background-color: #d5f0bf;
   padding: 10px;
   margin-bottom: 20px;
-  border-radius: 13px;
+  border-radius: 65px;
 }
 
 #score-final {
@@ -223,10 +223,10 @@ span {
   transform: translate(-50%, -50%);
   letter-spacing: 2;
   left: 50%;
-  top: 13%;
+  top: 21%;
   font-family: 'Irish Grover', cursive;
   text-transform: uppercase;
-  font-size: 7.5rem;
+  font-size: 10.5rem;
   color: #d0d8cb;
   text-shadow: 0 0 0.6rem #d0d8cb, 0 0 1.5rem #5c734c,
     -0.2rem 0.1rem 1rem #5c734c, 0.2rem 0.1rem 1rem #5c734c,

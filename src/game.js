@@ -51,7 +51,7 @@ class Game {
     if (this.highScore < this.score) {
       this.highScore = this.score;
       localStorage.setItem('highScore', this.score);
-      highScoreBoard.textContent = `High Sfcore: ${this.score}`;
+      highScoreBoard.textContent = `High Score: ${this.score}`;
     }
   }
 
