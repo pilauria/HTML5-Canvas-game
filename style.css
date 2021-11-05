@@ -73,6 +73,32 @@ body {
   font-size: 1.6rem;
 }
 
+#bis {
+  position: fixed;
+  top: 50%;
+  left: 3%;
+  width: 280px;
+  height: auto;
+  animation: rotation 33s infinite linear;
+}
+
+#first {
+  position: fixed;
+  top: 50%;
+  right: 3%;
+  width: 280px;
+  height: auto;
+  animation: rotation 33s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 .container-modal {
   position: fixed;
   display: flex;

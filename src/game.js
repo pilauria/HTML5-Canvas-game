@@ -155,7 +155,7 @@ class Game {
     powerUpLabel.style.position = 'absolute';
     powerUpLabel.style.color = 'yellow';
     powerUpLabel.style.fontFamily = 'DM Mono';
-    powerUpLabel.style.fontSize = '2.5rem';
+    powerUpLabel.style.fontSize = '2.8rem';
     powerUpLabel.style.userSelect = 'none';
     powerUpLabel.style.left = `${this.player.x}px`;
     powerUpLabel.style.top = `${this.player.y}px`;
@@ -261,6 +261,8 @@ class Game {
           backgroundAudio.pause();
           this.checkHighScore();
           gameOver.style.display = 'block';
+          image1.style.display = 'block';
+          image2.style.display = 'block';
           setTimeout(() => {
             gameOver.style.display = 'none';
             label.style.display = 'flex';

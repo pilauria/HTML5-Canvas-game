@@ -27,6 +27,8 @@ const scoreFinal = document.querySelector('#score-final');
 const highScoreBoard = document.querySelector('.highScore');
 const audioOffEl = document.querySelector('#audio');
 const audioOnEl = document.querySelector('#audioOn');
+const image1 = document.querySelector('#bis');
+const image2 = document.querySelector('#first');
 
 // ------ SOUND ------- //
 const startGameAudio = new Audio(
@@ -86,6 +88,8 @@ btnStart.addEventListener('click', () => {
   game.spawnPowerUps();
   startGameAudio.play();
   backgroundAudio.play();
+  image1.style.display = 'none';
+  image2.style.display = 'none';
   label.style.display = 'none';
   // console.log('scene:', game.scene);
   gsap.to('#whiteModal', {
