@@ -77,7 +77,7 @@ body {
   position: fixed;
   top: 50%;
   left: 3%;
-  width: 280px;
+  width: 250px;
   height: auto;
   animation: rotation 33s infinite linear;
 }
@@ -86,7 +86,7 @@ body {
   position: fixed;
   top: 50%;
   right: 3%;
-  width: 280px;
+  width: 250px;
   height: auto;
   animation: rotation 33s infinite linear;
 }

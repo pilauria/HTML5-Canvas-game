@@ -261,8 +261,10 @@ class Game {
           backgroundAudio.pause();
           this.checkHighScore();
           gameOver.style.display = 'block';
-          image1.style.display = 'block';
-          image2.style.display = 'block';
+          // side images disappear on start
+          [].forEach.call(document.querySelectorAll('.rotate'), function (el) {
+            el.style.display = 'block';
+          });
           setTimeout(() => {
             gameOver.style.display = 'none';
             label.style.display = 'flex';
@@ -272,7 +274,7 @@ class Game {
             opacity: 1,
             scale: 1,
             ease: 'expo',
-            duration: 0.75,
+            duration: 5.75,
           });
         }
       }
